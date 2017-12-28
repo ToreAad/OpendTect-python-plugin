@@ -1,5 +1,5 @@
 #include "pythoninstancemod.h"
-#include "odpythoninstance.h"
+#include "odpythoninstance/odpythoninstance.h"
 #include <string>
 
 mExpClass(PythonInstance) OdPython

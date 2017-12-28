@@ -1,7 +1,7 @@
 #include "odpython.h"
 #include "odpythonio.h"
 #include <string>
-#include "wrapper_survinfo.h"
+#include "wrapper/wrapper_survinfo.h"
 
 OdPythonInstance::OdPythonInstance()
 {

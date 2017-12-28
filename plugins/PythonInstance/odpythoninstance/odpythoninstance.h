@@ -3,10 +3,10 @@
 #define BOOST_NUMPY_STATIC_LIB
 #include <boost/python.hpp>
 
-#include "wrapper_survinfo.h"
+#include "wrapper/wrapper_survinfo.h"
 
 #include "pythoninstancemod.h"
-#include "odpythonio.h"
+#include "odpythoninstance/odpythonio.h"
 #include <string>
 
 class OdPythonInstance

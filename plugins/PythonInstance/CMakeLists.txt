@@ -9,9 +9,10 @@ set(OD_IS_PLUGIN yes )
 set(OD_MODULE_SOURCES
 	main.cpp
 	odpython.cpp
-	odpythonio.cpp
-	wrapper_survinfo.cpp
-	odpythoninstance.cpp
+	odpythoninstance/odpythonio.cpp
+	odpythoninstance/odpythoninstance.cpp
+	wrapper/wrapper_survinfo.cpp
+	
 )
 set(OD_MODULE_EXTERNAL_LIBS
 	Boost::python
