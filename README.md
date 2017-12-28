@@ -3,7 +3,7 @@ The objective of this project is to add scripting functionality to OpendTect sim
 This is achieved by embedding a python instance in a plugin that can be loaded by OpendTect, and exposing OpendTect classes to the python instance using boost::python wrappers.
 
 # What is working:
-I embedded a python instance in a plugin that can be accessed using a preliminary user interface that allows us to give single line commands to the python instance.
+I have embedded a python instance in a plugin that can be accessed using a preliminary user interface that allows us to give single line commands to the python instance.
 Currently I have wrapped has2D() and has3D() methods of the SI() OpenDtect object to a python object, this demonstrates that more usefull OpendTect classes can be exposed to the embedded python instance.
 
 # What needs to be done:
