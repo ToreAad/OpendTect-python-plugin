@@ -17,7 +17,6 @@ project(OpendTect_PythonConsole_Plugin)
 #_______________________________________________________________________________
 
 set(Boost_USE_STATIC_LIBS ON)
-set(BOOST_LIBRARYDIR C:/libs/boost/lib)
 find_package(Boost COMPONENTS python)
 
 find_package(PythonLibs REQUIRED)
@@ -27,13 +26,6 @@ if (NOT TARGET Python::libs)
 	set_property(TARGET Python::libs PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${PYTHON_INCLUDE_PATH})
 	set_property(TARGET Python::libs PROPERTY INTERFACE_SYSTEM_INCLUDE_DIRECTORIES ${PYTHON_INCLUDE_PATH})
 endif()
-
-#set(CATCH_INCLUDE_DIR C:/libs/Catch2/single_include)
-#add_library(Catch INTERFACE)
-#target_include_directories(Catch INTERFACE ${CATCH_INCLUDE_DIR})
-set(OpendTect_DIR 
-	"C:/Program Files/OpendTect/6.0.0"
-)
 
 # There are some warnings in the Boost::python library on my machine. This disables "treat warnings as errors in msvc12"
 add_definitions(/WX-)
