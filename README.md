@@ -4,7 +4,7 @@ This is achieved by embedding a python instance in a plugin that can be loaded b
 
 # What is working:
 I have embedded a python instance in a plugin that can be accessed using a preliminary user interface that allows us to give single line commands to the python instance.
-Currently I have wrapped has2D() and has3D() methods of the SI() OpenDtect object to a python object, this demonstrates that more usefull OpendTect classes can be exposed to the embedded python instance.
+Currently I have wrapped the has2D() and has3D() methods of the SI() OpenDtect c++ object to a python object, this demonstrates that more usefull OpendTect classes can be exposed to the embedded python instance.
 
 # What needs to be done:
 Wrapping OpendTect classes to python objects that we can call from the embedded python console.
