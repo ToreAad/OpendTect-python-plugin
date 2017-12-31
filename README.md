@@ -9,7 +9,7 @@ I have embedded a python instance in a plugin that can be accessed using a preli
 Currently I have wrapped the has2D() and has3D() methods of the SI() and the size() and objectID() methods of the EMM() OpenDtect c++ objects to a python object, this demonstrates that more usefull OpendTect classes can be exposed to the embedded python instance.
 
 # What needs to be done
-## OpenDtect Python API
+## OpendTect Python API
 
 * Designing a useful python API for OpenDtect.
 * Wrapping OpendTect classes to python objects that we can call from the embedded python console in a pythonic manner.
