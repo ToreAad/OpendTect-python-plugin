@@ -11,11 +11,12 @@ set(OD_MODULE_SOURCES
 	odpython.cpp
 	odpythoninstance/odpythonio.cpp
 	odpythoninstance/odpythoninstance.cpp
-	wrapper/wrapper_survinfo.cpp
-	wrapper/wrapper_emmanager.cpp
+	wrapper/odpywrapper.cpp
+#	wrapper/wrapper_survinfo.cpp
+#	wrapper/wrapper_emmanager.cpp
+#	wrapper/wrapper_emobject
 #	wrapper/wrapper_emhorizon3d.cpp
 #	wrapper/wrapper_emsurface.cpp
-#	wrapper/wrapper_emobject
 #	wrapper/wrapper_multiid
 #	wrapper/wrapper_objectid
 #	wrapper/wrapper_surfaceiodata

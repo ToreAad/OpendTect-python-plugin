@@ -3,7 +3,7 @@
 #define BOOST_NUMPY_STATIC_LIB
 #include <boost/python.hpp>
 
-#include "wrapper/wrapper.h"
+#include "wrapper/odpywrapper.h"
 
 #include "pythoninstancemod.h"
 #include "odpythoninstance/odpythonio.h"
@@ -24,11 +24,9 @@ public:
 
     static void initialize_class();
 
-    template<typename T>
-    static void register_class()
+    static void register_odpywrapper()
     {
-	class_registry.push_back(std::make_unique<T>());
-	class_registry.back()->register_class(main_namespace);
+	Odpywrapper::register_class(main_namespace);
     }
 
 private:
@@ -36,5 +34,4 @@ private:
     static boost::python::object main_namespace;
 
     static OdPythonIO odPythonIO;
-    static std::vector<std::unique_ptr<Wrapper>> class_registry;
 };
