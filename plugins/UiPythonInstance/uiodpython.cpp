@@ -20,11 +20,10 @@ UiOdPython::UiOdPython(uiParent* p)
     command_label = new uiLabel(this, ">>>");
     command_label->attach(leftAlignedBelow, command_history_disp);
 
-    command_field = new uiLineEdit(this, "");
+    command_field = new uiTextEdit(this, "");
     command_field->setPrefWidthInChar(100);
+    command_field->setPrefHeightInChar(8);
     command_field->attach(rightOf, command_label);
-    const CallBack return_pressed(mCB(this, UiOdPython, acceptOK));
-    command_field->returnPressed.notify(return_pressed);
 }
 
 UiOdPython::~UiOdPython()

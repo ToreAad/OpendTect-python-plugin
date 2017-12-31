@@ -6,7 +6,7 @@
 #include <memory>
 
 class uiIOObjSel;
-class uiLineEdit;
+class uiTextEdit;
 class uiTextBrowser;
 class uiLabel;
 
@@ -19,7 +19,7 @@ protected:
     bool		acceptOK(CallBacker*);
 	bool		do_command();
 
-	uiLineEdit*	command_field;
+	uiTextEdit*	command_field;
 	uiLabel*	command_label;
 	uiTextBrowser*	command_history_disp;
 	
