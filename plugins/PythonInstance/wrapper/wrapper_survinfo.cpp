@@ -27,5 +27,5 @@ bool Wrapper_survinfo::register_class(boost::python::object& main_namespace)
 	.def("has2D", &Access_SI::has2D)
 	.def("has3D", &Access_SI::has3D);
 
-    return false;
+    return true;
 }

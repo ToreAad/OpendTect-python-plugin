@@ -1,7 +1,8 @@
-#include "odpython.h"
+#include "odpythoninstance.h"
 #include "odpythonio.h"
 #include <string>
 #include "wrapper/wrapper_survinfo.h"
+#include "wrapper/wrapper_emmanager.h"
 
 OdPythonInstance::OdPythonInstance()
 {
@@ -44,10 +45,11 @@ void OdPythonInstance::initialize_class()
     py::import("sys").attr("stderr") = odPythonIO;
     py::import("sys").attr("stdout") = odPythonIO;
 
-    ws.register_class(main_namespace);
+    register_class<Wrapper_survinfo>();
+    register_class<Wrapper_emmanager>();
 }
 
 boost::python::object OdPythonInstance::main_module;
 boost::python::object OdPythonInstance::main_namespace;
 OdPythonIO OdPythonInstance::odPythonIO;
-Wrapper_survinfo OdPythonInstance::ws;
+std::vector<std::unique_ptr<Wrapper>> OdPythonInstance::class_registry;

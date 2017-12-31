@@ -3,11 +3,13 @@
 #define BOOST_NUMPY_STATIC_LIB
 #include <boost/python.hpp>
 
-#include "wrapper/wrapper_survinfo.h"
+#include "wrapper/wrapper.h"
 
 #include "pythoninstancemod.h"
 #include "odpythoninstance/odpythonio.h"
 #include <string>
+#include <vector>
+#include <memory>
 
 class OdPythonInstance
 {
@@ -22,10 +24,17 @@ public:
 
     static void initialize_class();
 
+    template<typename T>
+    static void register_class()
+    {
+	class_registry.push_back(std::make_unique<T>());
+	class_registry.back()->register_class(main_namespace);
+    }
+
 private:
     static boost::python::object main_module;
     static boost::python::object main_namespace;
 
     static OdPythonIO odPythonIO;
-    static Wrapper_survinfo ws;
+    static std::vector<std::unique_ptr<Wrapper>> class_registry;
 };
