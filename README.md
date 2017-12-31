@@ -17,7 +17,6 @@ Currently I have wrapped the has2D() and has3D() methods of the SI() and the siz
 ## GUI functionality
 
 * Functionality to pass a file containing python code to the embedded python instance.
-* Multiline input in the python console.
 * Redirecting standard input so that it works from the python console.
 
 # To compile the plugins
